@@ -6,20 +6,20 @@ POST http://localhost:3000/api/posteos
 Content-Type: application/json
 
 {
-   "title" : "nuevo titulo",
-   "content": "nuevo posteo",
-   "url_image": "www.google.com"
+   "title" : "quinto titulo",
+   "content": "quinto posteo",
+   "url_image": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
 }
 
 ###Modificar posteo
-PUT http://localhost:3000/api/posteos/6
+PUT http://localhost:3000/api/posteos/4
 Content-Type: application/json
 
 {
-   "title" : "hola id 6",
-   "content": "nuevo posteo",
-   "url_image": "www.url.com"
+   "title" : "cuarto titulo",
+   "content": "cuarto posteo",
+   "url_image": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
 }
 
 ###Eliminar posteo
-DELETE http://localhost:3000/api/posteos/3
+DELETE http://localhost:3000/api/posteos/5
