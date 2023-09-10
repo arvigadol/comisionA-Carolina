@@ -4,7 +4,7 @@ import { startDB } from './src/config/database.js';
 
 const app = express();
 
-const port = 3002;
+const port = 3000;
 
 app.use('/', posteoRouter)
 

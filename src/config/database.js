@@ -1,10 +1,12 @@
 import { Sequelize } from "sequelize";
 
-const sequelize = new Sequelize('db_posteo', 'root', '', {
+//lo exportamos para crear el modelo
+export const sequelize = new Sequelize('db_posteo', 'root', '', {
     host: 'localhost',
     dialect: 'mysql' 
 })
 
+//lo exportamos para usar en app.js
 export const startDB = async () => {
     try {
         await sequelize.authenticate();
