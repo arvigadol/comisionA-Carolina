@@ -8,6 +8,22 @@ export const createPosteoSchema = [
         .isString().withMessage('Debe ser string')
         .notEmpty().withMessage('No puede estar vacío'),
     body('url_image')
-        .isString().withMessage('Debe ser string')
+        .isURL().withMessage('Ingrese una URL válida')
         .notEmpty().withMessage('No puede estar vacío'),
 ]
+
+export const editPosteoSchema = [
+    body('title')
+        .optional()
+        .isString().withMessage('Debe ser string')
+        .notEmpty().withMessage('No puede estar vacío'),
+    body('content')
+        .optional()
+        .isString().withMessage('Debe ser string')
+        .notEmpty().withMessage('No puede estar vacío'),
+    body('url_image')
+        .optional()
+        .isURL().withMessage('Ingrese una URL válida')
+        .notEmpty().withMessage('No puede estar vacío'),
+]
+

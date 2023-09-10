@@ -1,7 +1,5 @@
 import { PosteoModel } from "../models/Posteos.js"
 
-PosteoModel
-
 //controlador para traer todas las tareas
 export const ctrlGetPosteos = async (req,res) => {
     try {
@@ -39,7 +37,7 @@ export const ctrlUpdatePosteo = async (req,res) => {
                 message: 'Tarea no encontrada'
             })
         }
-        posteoModificado.update(req.body)
+        await posteoModificado.update(req.body)
 
         return res.status(200).json(posteoModificado)        
     } catch (error) {

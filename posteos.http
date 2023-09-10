@@ -8,15 +8,15 @@ Content-Type: application/json
 {
    "title" : "nuevo titulo",
    "content": "nuevo posteo",
-   "url_image": "www.url.com"
+   "url_image": "www.google.com"
 }
 
 ###Modificar posteo
-PUT http://localhost:3000/api/posteos/2
+PUT http://localhost:3000/api/posteos/3
 Content-Type: application/json
 
 {
-   "title" : "puti",
+   "title" : "nuevo titulo",
    "content": "nuevo posteo",
    "url_image": "www.url.com"
 }
