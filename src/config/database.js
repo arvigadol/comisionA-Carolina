@@ -10,6 +10,7 @@ export const sequelize = new Sequelize('db_posteo', 'root', '', {
 export const startDB = async () => {
     try {
         await sequelize.authenticate();
+        //await sequelize.sync( {force: true});
         await sequelize.sync();
         console.log('Connection has been established successfully.');
       } catch (error) {

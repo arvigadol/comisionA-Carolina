@@ -12,4 +12,14 @@ Content-Type: application/json
 }
 
 ###Modificar posteo
+PUT http://localhost:3000/api/posteos/2
+Content-Type: application/json
+
+{
+   "title" : "puti",
+   "content": "nuevo posteo",
+   "url_image": "www.url.com"
+}
+
 ###Eliminar posteo
+DELETE http://localhost:3000/api/posteos/3

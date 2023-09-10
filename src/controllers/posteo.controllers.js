@@ -30,13 +30,50 @@ export const ctrlCreatePosteo = async (req,res) => {
 }
 
 //controlador para modificar una tarea
-export const ctrlUpdatePosteo = (req,res) => {
+export const ctrlUpdatePosteo = async (req,res) => {
+    const { id } = req.params
+    try {
+        const posteoModificado = await PosteoModel.findByPk(id)
+        if(!posteoModificado){
+            return res.status(404).json({
+                message: 'Tarea no encontrada'
+            })
+        }
+        posteoModificado.update(req.body)
 
+        return res.status(200).json(posteoModificado)        
+    } catch (error) {
+        console.error(error)
+        return res.status(500).json() ({
+            message: 'Error del servidor'
+        })     
+    }
 }
 
 //controlador para eliminar una tarea
-export const ctrlDeletePosteo = (req,res) => {
-
+export const ctrlDeletePosteo = async (req,res) => {
+    const { id } = req.params
+    console.log(id)
+    try {
+        const posteoDeleted = await PosteoModel.destroy({
+            where: {
+                id: id
+            }
+        })
+        if(!posteoDeleted){
+            return res.status(404).json({
+                message: 'Tarea no encontrada'
+            })
+        }
+        return res.status(200).json({
+            message: 'Tarea eliminada'
+        })        
+    } catch (error) {
+        console.error(error)
+        return res.status(500).json() ({
+            message: 'Error del servidor'
+        })     
+    }
 }
 
 
