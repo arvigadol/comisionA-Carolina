@@ -9,7 +9,7 @@
 <body>
     <header > 
         <h1>Mi Blog Personal</h1> 
-        <p class="p-bienvenida"> Bienvenidxs al blog de Caro, un lugar dónde voy volcando mis impresiones sobre diferentes tópicos. Seguí leyendo para saber más!</p>
+        <p class="p-bienvenida"> Bienvenidxs al blog de Caro, un lugar dónde voy volcando mis impresiones sobre diferentes tópicos. ¡Seguí leyendo para saber más!</p>
     </header>
     <main>
         <button type="button" class="btn btn-primary" id="btn-new">Nueva Publicación</button>
@@ -40,7 +40,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                         <div class="modal-body">
-                        <form>
+                        <form id="formulario">
                         <!-- ver como capturar la fecha e incluirla debajo del título -->
                             <div class="mb-3">
                             <label for="inputTitle" class="col-form-label">Título:</label>
@@ -54,11 +54,11 @@
                             <label for="inputUrl_image" class="col-form-label">URL imagen:</label>
                             <input type="url" class="form-control" id="inputUrl_image">
                             </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="submit" class="btn btn-primary" id="btn-save">Publicar!</button>
+                            </div>
                         </form>
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary" id="btn-save">Publicar!</button>
                         </div>
                     </div>
                 </div>
