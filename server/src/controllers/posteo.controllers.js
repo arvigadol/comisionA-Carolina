@@ -1,5 +1,10 @@
 import { PosteoModel } from "../models/Posteos.js"
 
+//controlador para mostrar la vista 
+export const ctrlViewPosteos = (req, res) => {
+    res.render('index.ejs')
+}
+
 //controlador para traer todas las tareas
 export const ctrlGetPosteos = async (req,res) => {
     try {
