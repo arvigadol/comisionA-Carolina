@@ -1,8 +1,16 @@
 import { PosteoModel } from "../models/Posteos.js"
 
 //controlador para mostrar la vista 
-export const ctrlViewPosteos = (req, res) => {
-    res.render('index.ejs')
+export const ctrlViewPosteos = async (req, res) => {
+    try {
+        const posteos = await PosteoModel.findAll();
+        return res.render('posteos.ejs', {posteos})
+     } catch (error) {
+         console.error(error)
+         return res.status(500).json() ({
+             message: 'Error del servidor'
+         })        
+     }
 }
 
 //controlador para traer todas las tareas
