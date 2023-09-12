@@ -1,1 +1,9 @@
-@import url("responsive.css");
+@import url(responsive.css);
+
+@import url(variables.css);
+
+@import url(body.css);
+
+@import url(card.css);
+
+@import url(footer.css);

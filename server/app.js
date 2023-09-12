@@ -24,18 +24,16 @@ app.use(helmet({
     contentSecurityPolicy: false
 }))
 
+//se configuraron las rutas a las vistas y a los archivos estáticos
 app.use(express.static(path.join(__dirname, "src", "public")));
 
 app.set('views', path.join(__dirname, "src", "views"));
 app.set('view engine', 'ejs');
 
+//se configuró el puerto como variable de entorno
 const port = process.env.PORT || 4000
 
 app.use('/', posteoRouter)
-
-/* app.get('/', (req, res) => {
-    res.send("Todo listo")
-}) */
 
 app.listen(port, () => {
     console.log(`server listening in http://localhost:${port}/posteos`)

@@ -1,0 +1,12 @@
+.footer {
+    background-color: var(--footer-bg-color);
+}
+
+.iconos, .power {
+    color: var(--light-tx-color);
+}
+
+i {
+    margin-right: 2em;
+    margin-left: 2em;
+}

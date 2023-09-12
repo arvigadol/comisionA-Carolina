@@ -1,10 +1,18 @@
 <%-  include('partials/header') -%>
 
-<header > 
-    <h1>Mi Blog Personal</h1> 
-    <p class="p-bienvenida"> Bienvenidxs al blog de Caro, un lugar dónde voy volcando mis impresiones sobre diferentes tópicos. ¡Seguí leyendo para saber más!</p>
+<header>
+    <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid" >
+          <a class="navbar-brand" href="#">
+            <img src="/css/images/cute-butterfly-design-free-vector.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Blog personal de Caro Ortega
+          </a>
+        </div>
+      </nav>
 </header>
 <main>
+    <h1>¡Bienvenidx!</h1>
+    <p>Acá vas a poder leer sobre mi día a día y lo que pienso sobre varios temas que me interesan. Seguí leyendo para saber más :)</p>
     <button type="button" class="btn btn-primary" id="btn-new">Nueva Publicación</button>
     <div class="container text-center">
         <div class="row" id="container-row">
@@ -31,6 +39,7 @@
                   <div class="col-md-8">
                     <div class="card-body">
                       <p class="card-text"><small class="text-body-secondary">Publicado el <%= (posteo.createdAt).toLocaleDateString() %> a las <%= (posteo.createdAt).toLocaleTimeString() %></small></p>
+                      <p class="card-text"><small class="text-body-secondary">Modificado el <%= (posteo.updatedAt).toLocaleDateString() %> a las <%= (posteo.updatedAt).toLocaleTimeString() %></small></p>
                       <h5 class="card-title"><%= posteo.title %></h5>
                       <p class="card-text"><%= posteo.content %></p>
                         <div>
@@ -50,7 +59,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Datos de la nueva publicación</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">¿Qué estoy pensando?</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">

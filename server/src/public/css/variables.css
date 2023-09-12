@@ -1,0 +1,44 @@
+:root {
+
+    /*Colores de background*/
+    
+    --body-bg-color: rgb(245, 210, 235);
+    --footer-bg-color: rgb(173, 66, 155);
+    --main-bg-color: white;
+    --trans-bg-color: beige;
+    --hover-bg-color: grey;
+    
+    /*Colores de formulario*/
+    
+    --url-valid: rgb(6, 174, 6);
+    --url-invalid: rgb(241, 11, 11);
+    
+    /*Tipos de fuentes*/
+    
+    --h1-font-family: 'Roboto Flex', sans-serif;
+
+    
+    /*Tamaños de fuentes*/ 
+    
+    --xx-small: 0.3em;
+    --x-small: 0.75em;
+    --small: 0.85em;
+    --medium: 1em;
+    --large: 1.33em;
+    --x-large: 1.66em;
+    --xx-large: 2.33em;
+    
+    /*Colores de fuentes*/
+    
+    --light-tx-color: rgb(26, 4, 20);
+    --navitem-tx-color: rgb(40, 21, 74);
+    --text-tx-color: rgb(40, 21, 74);
+    --cajas-tx-color: rgb(127, 166, 228);
+    
+    /*Peso de fuentes*/
+    
+    --lighter: lighter;
+    --light: light;
+    --bold: bold;
+    --bolder: bolder;
+    }
