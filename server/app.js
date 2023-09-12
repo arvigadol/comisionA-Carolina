@@ -5,6 +5,7 @@ import path from 'node:path';
 import cors from 'cors';
 import morgan from 'morgan';
 import helmet from 'helmet';
+//import 'dotenv/config'
 
 import { fileURLToPath } from 'node:url';
 
@@ -28,7 +29,7 @@ app.use(express.static(path.join(__dirname, "src", "public")));
 app.set('views', path.join(__dirname, "src", "views"));
 app.set('view engine', 'ejs');
 
-const port = 3000;
+const port = process.env.PORT || 3000
 
 app.use('/', posteoRouter)
 

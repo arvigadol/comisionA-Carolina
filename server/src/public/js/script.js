@@ -23,7 +23,7 @@ btnCrear.addEventListener('click', () => {
 
 document.addEventListener('click', (event) => {
     if (event.target.matches('#btn-delete')) {
-        const article = event.target.closest('.container-fluid')
+        const article = event.target.closest('.mb-3')
         const idArticle = article.dataset.id
         
         Swal.fire({
@@ -58,12 +58,13 @@ document.addEventListener('click', (event) => {
 
 document.addEventListener('click', (event) => {
     if (event.target.matches('#btn-edit')) {
-        const article = event.target.closest('.container-fluid')
+        const article = event.target.closest('.mb-3')
 
         const idArticle = article.dataset.id;
-        const url_imageEdit = article.children[0].children[0].src;
-        const titleEdit = article.children[0].children[1].children[0].textContent;
-        const contentEdit = article.children[0].children[1].children[1].textContent;
+        const url_imageEdit = article.children[0].children[0].children[0].src;
+        const titleEdit = article.children[0].children[1].children[0].children[1].textContent;
+        const contentEdit = article.children[0].children[1].children[0].children[2].textContent;
+
         
         idForm = idArticle;
         inputTitle.value = titleEdit;
@@ -91,8 +92,14 @@ form.addEventListener('submit',(event) => {
             },
             body: JSON.stringify(newPosteo),
         }).then((res) => {
-            if (res.ok) {
-                alert("Tarea creada con éxito");
+            if (res.ok) {                 
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Publicación creada!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                //alert("Publicación creada con éxito");
                 miModal.hide();
                 location.reload();
             }
@@ -115,7 +122,18 @@ form.addEventListener('submit',(event) => {
         body: JSON.stringify(newPosteo),
       }).then((res) => {
         if (res.ok) {
-            alert("Tarea modificada con éxito");
+            Swal.fire({
+                title: '¡Publicación modificada!',
+                width: 600,
+                padding: '3em',
+                color: '#716add',
+                backdrop: `
+                  rgba(0,0,123,0.4)
+                  left top
+                  no-repeat
+                `
+              })
+            //alert("Publicación modificada con éxito");
             miModal.hide();
             location.reload();
         }
