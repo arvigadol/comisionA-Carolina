@@ -54,20 +54,18 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="formulario">
-                    <!-- ver como capturar la fecha e incluirla debajo del título -->
-                    
+                    <form id="formulario">                    
                         <div class="mb-3">
                         <label for="inputTitle" class="col-form-label">Título:</label>
-                        <input type="text" class="form-control" id="inputTitle">
+                        <input type="text" class="form-control" id="inputTitle" required>
                         </div>
                         <div class="mb-3">
                         <label for="inputContent" class="col-form-label">Contenido:</label>
-                        <textarea class="form-control" id="inputContent"></textarea>
+                        <textarea class="form-control" id="inputContent" required></textarea>
                         </div>
                         <div class="mb-3">
                         <label for="inputUrl_image" class="col-form-label">URL imagen:</label>
-                        <input type="url" class="form-control" id="inputUrl_image">
+                        <input type="url" class="form-control" id="inputUrl_image" required>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

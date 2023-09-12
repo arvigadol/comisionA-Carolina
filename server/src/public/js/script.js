@@ -34,24 +34,26 @@ document.addEventListener('click', (event) => {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: '¡Si, eliminar!'
-          }).then((result) => {
-            if (result.isConfirmed) {
-              Swal.fire(
-                '¡Listo!',
-                'Tu publicación fue eliminada',
-                'success'
-              )
-            }
-          })
 
-        fetch(`http://localhost:3000/api/posteos/${idArticle}`, {
-            method: 'DELETE'
-        }).then(res => {
-            if (res.ok) {
-                article.remove()
-            }
-        }).catch (error => {
-            console.error(error)
+          }).then((result) => {
+        if (result.isConfirmed) {
+            fetch(`http://localhost:3000/api/posteos/${idArticle}`, {
+                method: 'DELETE'
+            }).then(res => {
+                if (res.ok) {
+
+            Swal.fire(
+            '¡Listo!',
+            'Tu publicación fue eliminada',
+            'success'
+            )
+                    article.remove()
+                    
+                }
+            }).catch (error => {
+                console.error(error)
+            })
+        }
         })
     }
 })
@@ -85,6 +87,7 @@ form.addEventListener('submit',(event) => {
             content: inputContent.value,
             url_image: inputUrl_image.value,
         };
+
         fetch ('http://localhost:3000/api/posteos', {
             method: 'POST',
             headers: {
@@ -98,45 +101,45 @@ form.addEventListener('submit',(event) => {
                     title: '¡Publicación creada!',
                     showConfirmButton: false,
                     timer: 1500
+                }).then(() => {
+                    miModal.hide();
+                    location.reload();
                 })
-                //alert("Publicación creada con éxito");
-                miModal.hide();
-                location.reload();
             }
         }).catch(error => {
             console.error(error);
         })
-       }
+    }
 
     if (option === "edit") {
         const newPosteo = {
             title: inputTitle.value,
             content: inputContent.value,
             url_image: inputUrl_image.value,
-    };
-    fetch(`http://localhost:3000/api/posteos/${idForm}`, {
-        method: 'PUT',
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newPosteo),
-      }).then((res) => {
-        if (res.ok) {
-            Swal.fire({
-                title: '¡Publicación modificada!',
-                width: 600,
-                padding: '3em',
-                color: '#716add',
-                backdrop: `
-                  rgba(0,0,123,0.4)
-                  left top
-                  no-repeat
-                `
-              })
-            //alert("Publicación modificada con éxito");
-            miModal.hide();
-            location.reload();
-        }
+        };
+        fetch(`http://localhost:3000/api/posteos/${idForm}`, {
+            method: 'PUT',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newPosteo),
+        }).then((res) => {
+            if (res.ok) {
+                Swal.fire({
+                    title: '¡Publicación modificada!',
+                    width: 600,
+                    padding: '3em',
+                    color: '#716add',
+                    backdrop: `
+                    rgba(0,0,123,0.4)
+                    left top
+                    no-repeat
+                    `
+                }).then(() => {
+                    miModal.hide();
+                    location.reload();
+                })
+            }
         }).catch(error => {
             console.error(error);
         })
