@@ -1,9 +1,9 @@
 import { Sequelize } from "sequelize";
 
 //lo exportamos para crear el modelo
-export const sequelize = new Sequelize('db_posteo', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql' 
+export const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+    host: process.env.DB_HOST,
+    dialect: process.env.DB_DIALECT
 })
 
 //lo exportamos para usar en app.js

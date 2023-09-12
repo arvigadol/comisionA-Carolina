@@ -1,12 +1,12 @@
 import express from 'express';
-import { posteoRouter } from './src/routes/posteo.routes.js';
-import { startDB } from './src/config/database.js';
 import path from 'node:path';
 import cors from 'cors';
 import morgan from 'morgan';
 import helmet from 'helmet';
-//import 'dotenv/config'
+import 'dotenv/config';
 
+import { posteoRouter } from './src/routes/posteo.routes.js';
+import { startDB } from './src/config/database.js';
 import { fileURLToPath } from 'node:url';
 
 //se configura ejs
@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, "src", "public")));
 app.set('views', path.join(__dirname, "src", "views"));
 app.set('view engine', 'ejs');
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 4000
 
 app.use('/', posteoRouter)
 
