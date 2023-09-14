@@ -1,12 +1,10 @@
 # comision-A-Carolina-Ortega
 
 
-# Nota1: me apareció demasiadas veces el error puerto YYYY ocupado. Solución: abrir el cmd como administrador y tipear: netstat -nao|findstr 0.0:YYYY (nos mostrará el PID XXXX; |=alt124) -> taskkill /pid XXXX /f = Correcto, se terminó el proceso con PID XXXX
+Nota 1: me apareció demasiadas veces el error puerto YYYY ocupado. Solución: abrir el cmd como administrador y tipear: netstat -nao|findstr 0.0:YYYY (nos mostrará el PID XXXX; |=alt124) -> taskkill /pid XXXX /f = Correcto, se terminó el proceso con PID XXXX
 
 
-# Nota2: Tuve algunos problemas con los pusheos a github, aparece un commit con un merge que no sé cómo pasó, y aparece una rama que creo que creé por error, por eso me parece que los commits figuran desordenados.
-
-# Nota3: Dejo 3 URL a mano para las imágenes:
+Nota 2: Dejo 3 URL a mano para las imágenes:
 
 https://thumbs.dreamstime.com/b/paisajes-de-yosemite-46208063.jpg
 
@@ -24,4 +22,5 @@ Dudas:
 
 -Extensiones: no funciona el Live-Server. Es porque estoy renderizando desde el servidor? Para poder ver el impacto de los cambios, tuve que abrir mi web desde el localhost en la terminal y refrescar la página cada vez.
 
--Git y Git-Hub: me parece que hay más ramas de las que debería, una puede que la haya creado por error (-origin), las otras no entiendo que pasó. No debería estar todo en -main?
+-Git y Git-Hub: 1- me parece que hay más ramas de las que debería, una puede que la haya creado por error (-origin), las otras no entiendo que pasó. No debería estar todo en -main?
+2- Tuve algunos problemas con los pusheos a github, aparece un commit con un merge que no sé cómo pasó, y aparece una rama que creo que creé por error, por eso me parece que los commits figuran desordenados.
