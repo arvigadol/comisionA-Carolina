@@ -1,90 +1,87 @@
 <%-  include('partials/header') -%>
 
-<header>
-    <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
-        <div class="container-fluid" >
-          <a class="navbar-brand" href="#">
-            <img src="/css/images/cute-butterfly-design-free-vector.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-            Blog personal de Caro Ortega
-          </a>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <p class="navbar-brand" href="#">
+                    <img src="/css/images/cute-butterfly-design-free-vector.jpg" alt="Logo" class="navbar-brand" width="30" height="35" class="d-inline-block align-text-top">
+                    Blog personal de Caro Ortega
+                    </p>
+                <ul>
+                    <li class="navbar-item"><a href="">HOME</a></li>
+                    <li class="navbar-item"><a href="">SOBRE MI</a></li>
+                    <li class="navbar-item"><a href="">CONTACTO</a></li>
+                </ul>
+            </div>
+            </nav>
+    </header>          
+    <main>
+        <div class="div-bienvenida">
+            <h1 class="h1-bienvenida">Bienvenidx</h1>            
+            <p class="p-bienvenida">Acá vas a poder leer sobre mi día a día y lo que pienso sobre varios temas que me interesan. ¡Seguí leyendo para saber más!</p>   
         </div>
-      </nav>
-</header>
-<main>
-    <h1>¡Bienvenidx!</h1>
-    <p>Acá vas a poder leer sobre mi día a día y lo que pienso sobre varios temas que me interesan. Seguí leyendo para saber más :)</p>
-    <button type="button" class="btn btn-primary" id="btn-new">Nueva Publicación</button>
-    <div class="container text-center">
-        <div class="row" id="container-row">
-        <% posteos.forEach(posteo => { %>
+        <div class="div-button">
+            <button type="button" class="btn btn-primary" id="btn-new">Nueva Publicación</button>
+        </div>      
+        <div class="container text-right">
+            <div class="row" id="container-row">
+            <% posteos.forEach(posteo => { %>
 
-            <!-- <article class="container-fluid" data-id="<%= posteo.id %>">
-                <div class="card" style="width: 30rem;">
-                    <img src="<%= posteo.url_image %>">
-                    <div class="card-body">
+                <!-- articulo -->
+                <article class="card mb-3" data-id="<%= posteo.id %>">
+                    <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="<%= posteo.url_image %>" class="img-fluid rounded-start" alt="Imagen ilustrativa de la publicación cuyo título es <%= posteo.title %>">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <p class="card-text"><small class="text-body-secondary">Publicado el <%= (posteo.createdAt).toLocaleDateString() %> a las <%= (posteo.createdAt).toLocaleTimeString() %></small></p>
+                        <p class="card-text"><small class="text-body-secondary">Modificado el <%= (posteo.updatedAt).toLocaleDateString() %> a las <%= (posteo.updatedAt).toLocaleTimeString() %></small></p>
                         <h5 class="card-title"><%= posteo.title %></h5>
-                        <p class="card-text"><%= posteo.content %></p>
-                        <div>
-                            <button class="btn btn-secondary" id="btn-edit">Editar</button>
-                            <button type="" class="btn btn-danger" id="btn-delete">Eliminar</button>
+                        <p class="card-text overflow"><%= posteo.content %></p>
+                            <div>
+                                <button class="btn btn-secondary" id="btn-edit">Editar</button>
+                                <button type="" class="btn btn-danger" id="btn-delete">Eliminar</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </article> -->
-            <article class="card mb-3" data-id="<%= posteo.id %>">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="<%= posteo.url_image %>" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <p class="card-text"><small class="text-body-secondary">Publicado el <%= (posteo.createdAt).toLocaleDateString() %> a las <%= (posteo.createdAt).toLocaleTimeString() %></small></p>
-                      <p class="card-text"><small class="text-body-secondary">Modificado el <%= (posteo.updatedAt).toLocaleDateString() %> a las <%= (posteo.updatedAt).toLocaleTimeString() %></small></p>
-                      <h5 class="card-title"><%= posteo.title %></h5>
-                      <p class="card-text"><%= posteo.content %></p>
-                        <div>
-                            <button class="btn btn-secondary" id="btn-edit">Editar</button>
-                            <button type="" class="btn btn-danger" id="btn-delete">Eliminar</button>
-                        </div>
                     </div>
-                  </div>
-                </div>
-              </article>    
+                </article>    
 
-        <% })%>
-        </div>
-    </div>
-    <!-- modal -->
-    <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">¿Qué estoy pensando?</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="formulario">                    
-                        <div class="mb-3">
-                        <label for="inputTitle" class="col-form-label">Título:</label>
-                        <input type="text" class="form-control" id="inputTitle" required>
-                        </div>
-                        <div class="mb-3">
-                        <label for="inputContent" class="col-form-label">Contenido:</label>
-                        <textarea class="form-control" id="inputContent" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                        <label for="inputUrl_image" class="col-form-label">URL imagen:</label>
-                        <input type="url" class="form-control" id="inputUrl_image" required>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="submit" class="btn btn-primary" id="btn-save">Publicar!</button>
-                        </div>
-                    </form>
-                </div>
+            <% })%>
             </div>
         </div>
-    </div>        
-</main>
+        <!-- modal -->
+        <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Qué estoy pensando?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formulario">                    
+                            <div class="mb-3">
+                            <label for="inputTitle" class="col-form-label">Tema de hoy:</label>
+                            <input type="text" class="form-control" id="inputTitle" required>
+                            </div>
+                            <div class="mb-3">
+                            <label for="inputContent" class="col-form-label">Contenido:</label>
+                            <textarea class="form-control" id="inputContent" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                            <label for="inputUrl_image" class="col-form-label">URL imagen:</label>
+                            <input type="url" class="form-control" id="inputUrl_image" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="submit" class="btn btn-primary" id="btn-save">¡Publicar!</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </main>
 
 <%-  include('partials/footer') -%>

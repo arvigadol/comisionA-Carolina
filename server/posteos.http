@@ -22,4 +22,4 @@ Content-Type: application/json
 }
 
 ###Eliminar posteo
-DELETE http://localhost:3000/api/posteos/1
+DELETE http://localhost:3000/api/posteos/47

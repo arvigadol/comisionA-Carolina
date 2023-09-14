@@ -1,12 +1,30 @@
-.footer {
-    background-color: var(--footer-bg-color);
+*´{
+    margin: 0;
 }
+footer {
+    background-color: var(--light-bg-color);
+} 
 
 .iconos, .power {
-    color: var(--light-tx-color);
+    padding: .5em;
+    margin: 0 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    color: var(--dark-tx-color);
 }
 
 i {
     margin-right: 2em;
     margin-left: 2em;
+}
+
+.power__p{
+    margin: 0;
+}
+
+.p-icono{
+    display: inline;
+    padding: 0 1em;
 }

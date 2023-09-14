@@ -2,20 +2,20 @@
 
     /*Colores de background*/
     
-    --body-bg-color: rgb(245, 210, 235);
-    --footer-bg-color: rgb(173, 66, 155);
-    --main-bg-color: white;
-    --trans-bg-color: beige;
-    --hover-bg-color: grey;
+    --light-bg-color: rgb(245, 210, 235);
+    --dark-bg-color: rgb(173, 66, 155);
+    --darker-bg-color: rgb(101, 3, 114);
+    --bright-bg-color: rgb(253, 26, 238);
+
+    /* Colores de botones */
+
+    --light-btn-new-color: white;
+    --dark-btn-new-color: black;
+        
+    /*Colores de fuentes*/
     
-    /*Colores de formulario*/
-    
-    --url-valid: rgb(6, 174, 6);
-    --url-invalid: rgb(241, 11, 11);
-    
-    /*Tipos de fuentes*/
-    
-    --h1-font-family: 'Roboto Flex', sans-serif;
+    --light-tx-color: rgb(205, 196, 211);
+    --dark-tx-color: rgb(26, 4, 20);
 
     
     /*Tamaños de fuentes*/ 
@@ -26,19 +26,6 @@
     --medium: 1em;
     --large: 1.33em;
     --x-large: 1.66em;
-    --xx-large: 2.33em;
-    
-    /*Colores de fuentes*/
-    
-    --light-tx-color: rgb(26, 4, 20);
-    --navitem-tx-color: rgb(40, 21, 74);
-    --text-tx-color: rgb(40, 21, 74);
-    --cajas-tx-color: rgb(127, 166, 228);
-    
-    /*Peso de fuentes*/
-    
-    --lighter: lighter;
-    --light: light;
-    --bold: bold;
-    --bolder: bolder;
+    --xx-large: 3.5em;
+
     }

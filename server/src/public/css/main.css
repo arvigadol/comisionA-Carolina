@@ -1,0 +1,52 @@
+.div-bienvenida { 
+    margin: 0px;
+    padding: 0px;
+}
+
+.h1-bienvenida {
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--xx-large);
+    color: var(--dark-bg-color);
+    background-color: var(--light-bg-color);
+}
+
+.p-bienvenida {
+    margin: 0px;
+    padding: 0 2em;
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--x-large);
+    color: var(--dark-bg-color);
+    background-color: var(--light-bg-color);
+}
+.h1-bienvenida:hover, .p-bienvenida:hover {
+    color: var(--light-bg-color);
+    background-color: var(--dark-bg-color);
+}
+
+.div-button {
+    margin: 1em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#btn-new {
+    background-color: var(--darker-bg-color);
+    color: white;
+    border-color: var(--dark-bg-color);
+}
+
+#btn-new:hover {
+    background-color: var( --light-btn-new-color);
+    color: var(--dark-btn-new-color);   
+    font-weight: 500;
+}
+
+.container {
+    background-color: var(--dark-bg-color);
+}
+

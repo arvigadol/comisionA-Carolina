@@ -64,8 +64,8 @@ document.addEventListener('click', (event) => {
 
         const idArticle = article.dataset.id;
         const url_imageEdit = article.children[0].children[0].children[0].src;
-        const titleEdit = article.children[0].children[1].children[0].children[1].textContent;
-        const contentEdit = article.children[0].children[1].children[0].children[2].textContent;
+        const titleEdit = article.children[0].children[1].children[0].children[2].textContent;
+        const contentEdit = article.children[0].children[1].children[0].children[3].textContent;
 
         
         idForm = idArticle;

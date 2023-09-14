@@ -1,8 +1,14 @@
+@import url(reset.css);
+
 @import url(responsive.css);
 
 @import url(variables.css);
 
 @import url(body.css);
+
+@import url(main.css);
+
+@import url(header.css);
 
 @import url(card.css);
 
