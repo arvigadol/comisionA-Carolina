@@ -1,4 +1,10 @@
-# comision-A-Carolina-Ortega
+<h1 align="center"> EPICA - Argentina Programa 4.0 </h1>
+<h2 align="center"> comision-A-Carolina-Ortega </h2>
+
+
+<p align="left">
+<img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
+</p>
 
 # Este es el trabajo final del módulo 2, dónde nos pidieron realizar un foro personalizado en el que el usuario pueda escribir y presentar sus publicaciones de manera atractiva. Para ellos se desarrolló una página en la que mediante un botón aparece un formulario para realizar una publicación y en el main de la página van quedando las publicaciones ordenadas según la fecha de creación.
 
