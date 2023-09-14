@@ -12,14 +12,16 @@
 
 <h2 align="left">Instrucciones para ejecutarlo localmente</h2>
 <p>
-    Para visualizar correctamente la página, deberían seguirse estos pasos:
-    1) Clonar el proyecto mediante esta URL: https://github.com/arvigadol/comisionA-Carolina-Ortega.git o bien, descargar el archivo zip que allí se encuentra disponible.
-    2) Abrir la carpeta principal del proyecto con un Visual Studio Code
-    3) Abrir una terminal e instalar todas las librerías indicadas en el archivo package.json, incluyendo nodemon como dependencia de desarrollo
-    4) Descargar Xampp, instalarlo, abrirlo y clickear sobre Start en los módulos Apache y MySQL
-    5) En el editor, navegar hasta la carpeta server mediante el comando $ cd server. Luego tipear: $ npm run dev
-    6) Si todo salió bien, se debería poder acceder al proyecto en: http://localhost:3000/posteos
+    Para visualizar correctamente la página, deberían seguirse estos pasos:  
 </p>
+<ol>
+    <li>Clonar el proyecto mediante esta URL: https://github.com/arvigadol/comisionA-Carolina-Ortega.git o bien, descargar el archivo zip que allí se encuentra disponible.</li>
+    <li>2Abrir la carpeta principal del proyecto con un Visual Studio Code</li>
+    <li>Abrir una terminal e instalar todas las librerías indicadas en el archivo package.json, incluyendo nodemon como dependencia de desarrollo</li>
+    <li>Descargar Xampp, instalarlo, abrirlo y clickear sobre Start en los módulos Apache y MySQL</li>
+    <li>En el editor, navegar hasta la carpeta server mediante el comando $ cd server. Luego tipear: $ npm run dev</li>
+    <li>Si todo salió bien, se debería poder acceder al proyecto en: http://localhost:3000/posteos</li>
+</ol>
 
 Dudas y problemas encontrados:
 
