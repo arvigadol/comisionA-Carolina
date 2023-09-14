@@ -9,6 +9,7 @@
 h1 {
     padding-top: 0.5em;
     text-align: center;
+    font-weight: bold;
     font-size: var(--xx-large);
     color: var(--dark-bg-color);
 }

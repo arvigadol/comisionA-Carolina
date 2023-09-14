@@ -6,7 +6,20 @@
 <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
 </p>
 
+<h2 align="left">Breve descripción del proyecto</h2>
+
 # Este es el trabajo final del Tramo 2. Nos pidieron realizar un foro personalizado en el que el usuario pueda escribir y presentar sus publicaciones de manera atractiva. Para ello, se desarrolló una página en la que, mediante un botón, aparece un formulario para realizar una publicación. Al agregar una entrada, en el main de la página, van sumándose las publicaciones, ordenadas según la fecha de creación.
+
+<h2 align="left">Instrucciones para ejecutarlo localmente</h2>
+<p>
+    Para visualizar correctamente la página, deberían seguirse estos pasos:
+    1) Clonar el proyecto mediante esta URL: https://github.com/arvigadol/comisionA-Carolina-Ortega.git o bien, descargar el archivo zip que allí se encuentra disponible.
+    2) Abrir la carpeta principal del proyecto con un Visual Studio Code
+    3) Abrir una terminal e instalar todas las librerías indicadas en el archivo package.json, incluyendo nodemon como dependencia de desarrollo
+    4) Descargar Xampp, instalarlo, abrirlo y clickear sobre Start en los módulos Apache y MySQL
+    5) En el editor, navegar hasta la carpeta server mediante el comando $ cd server. Luego tipear: $ npm run dev
+    6) Si todo salió bien, se debería poder acceder al proyecto en: http://localhost:3000/posteos
+</p>
 
 Dudas y problemas encontrados:
 
