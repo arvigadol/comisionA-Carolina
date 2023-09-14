@@ -2,7 +2,7 @@
 <h2 align="center"> comision-A-Carolina-Ortega </h2>
 
 
-<p align="left">
+<p align="center">
 <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
 </p>
 
