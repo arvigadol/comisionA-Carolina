@@ -4,7 +4,7 @@
         <nav class="navbar">
             <div class="container-fluid">
                 <p class="navbar-brand" href="#">
-                    <img src="/css/images/cute-butterfly-design-free-vector.jpg" alt="Logo" class="navbar-brand" width="30" height="35" class="d-inline-block align-text-top">
+                    <img src="/css/images/cute-butterfly-design-free-vector.jpg" alt="Logo" class="navbar-brand mariposa" width="30" height="35" class="d-inline-block align-text-top">
                     Blog personal de Caro Ortega
                     </p>
                 <ul>
@@ -23,28 +23,28 @@
         <div class="div-button">
             <button type="button" class="btn btn-primary" id="btn-new">Nueva Publicación</button>
         </div>      
-        <div class="container text-right">
+        <div class="container">
             <div class="row" id="container-row">
             <% posteos.forEach(posteo => { %>
 
                 <!-- articulo -->
                 <article class="card mb-3" data-id="<%= posteo.id %>">
                     <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="<%= posteo.url_image %>" class="img-fluid rounded-start" alt="Imagen ilustrativa de la publicación cuyo título es <%= posteo.title %>">
-                    </div>
+                        <div class="col-md-4">
+                            <img src="<%= posteo.url_image %>" class="img-fluid rounded-start" alt="Imagen ilustrativa de la publicación cuyo título es <%= posteo.title %>">
+                        </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                        <p class="card-text"><small class="text-body-secondary">Publicado el <%= (posteo.createdAt).toLocaleDateString() %> a las <%= (posteo.createdAt).toLocaleTimeString() %></small></p>
-                        <p class="card-text"><small class="text-body-secondary">Modificado el <%= (posteo.updatedAt).toLocaleDateString() %> a las <%= (posteo.updatedAt).toLocaleTimeString() %></small></p>
-                        <h5 class="card-title"><%= posteo.title %></h5>
-                        <p class="card-text overflow"><%= posteo.content %></p>
-                            <div>
-                                <button class="btn btn-secondary" id="btn-edit">Editar</button>
-                                <button type="" class="btn btn-danger" id="btn-delete">Eliminar</button>
+                            <p class="card-text time"><small class="text-body-secondary publicado">Publicado el <%= (posteo.createdAt).toLocaleDateString() %> a las <%= (posteo.createdAt).toLocaleTimeString() %></small></p>
+                            <p class="card-text time"><small class="text-body-secondary modificado">Modificado el <%= (posteo.updatedAt).toLocaleDateString() %> a las <%= (posteo.updatedAt).toLocaleTimeString() %></small></p>
+                            <h5 class="card-title"><%= posteo.title %></h5>
+                            <p class="card-text overflow"><%= posteo.content %></p>
+                                <div class="botonera">
+                                    <button class="btn btn-secondary" id="btn-edit">Editar</button>
+                                    <button type="" class="btn btn-danger" id="btn-delete">Eliminar</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </article>    
 
