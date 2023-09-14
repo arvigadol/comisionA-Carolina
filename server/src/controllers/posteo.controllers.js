@@ -1,6 +1,6 @@
 import { PosteoModel } from "../models/Posteos.js"
 
-//controlador para mostrar la vista 
+//controlador para mostrar la vista principal
 export const ctrlViewPosteos = async (req, res) => {
     try {
         const posteos = await PosteoModel.findAll();

@@ -14,7 +14,6 @@ const inputUrl_image = document.getElementById('inputUrl_image')
 
 btnCrear.addEventListener('click', () => {
     option = "new"
-    btnSave.textContent = "Publicar!"
     inputTitle.value = ""
     inputContent.value = ""
     inputUrl_image.value = ""

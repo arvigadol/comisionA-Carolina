@@ -1,20 +1,5 @@
 <%-  include('partials/header') -%>
-
-    <header>
-        <nav class="navbar">
-            <div class="container-fluid">
-                <p class="navbar-brand" href="#">
-                    <img src="/css/images/cute-butterfly-design-free-vector.jpg" alt="Logo" class="navbar-brand mariposa" width="30" height="35" class="d-inline-block align-text-top">
-                    Blog personal de Caro Ortega
-                    </p>
-                <ul>
-                    <li class="navbar-item"><a href="">HOME</a></li>
-                    <li class="navbar-item"><a href="">SOBRE MI</a></li>
-                    <li class="navbar-item"><a href="">CONTACTO</a></li>
-                </ul>
-            </div>
-            </nav>
-    </header>          
+   
     <main>
         <div class="div-bienvenida">
             <h1 class="h1-bienvenida">Bienvenidx</h1>            
@@ -33,12 +18,12 @@
                         <div class="col-md-4">
                             <img src="<%= posteo.url_image %>" class="img-fluid rounded-start" alt="Imagen ilustrativa de la publicación cuyo título es <%= posteo.title %>">
                         </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <p class="card-text time"><small class="text-body-secondary publicado">Publicado el <%= (posteo.createdAt).toLocaleDateString() %> a las <%= (posteo.createdAt).toLocaleTimeString() %></small></p>
-                            <p class="card-text time"><small class="text-body-secondary modificado">Modificado el <%= (posteo.updatedAt).toLocaleDateString() %> a las <%= (posteo.updatedAt).toLocaleTimeString() %></small></p>
-                            <h5 class="card-title"><%= posteo.title %></h5>
-                            <p class="card-text overflow"><%= posteo.content %></p>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <p class="card-text time"><small class="text-body-secondary publicado">Publicado el <%= (posteo.createdAt).toLocaleDateString() %> a las <%= (posteo.createdAt).toLocaleTimeString() %></small></p>
+                                <p class="card-text time"><small class="text-body-secondary modificado">Modificado el <%= (posteo.updatedAt).toLocaleDateString() %> a las <%= (posteo.updatedAt).toLocaleTimeString() %></small></p>
+                                <h5 class="card-title"><%= posteo.title %></h5>
+                                <p class="card-text p-contenido"><%= posteo.content %></p>
                                 <div class="botonera">
                                     <button class="btn btn-secondary" id="btn-edit">Editar</button>
                                     <button type="" class="btn btn-danger" id="btn-delete">Eliminar</button>
@@ -62,20 +47,20 @@
                     <div class="modal-body">
                         <form id="formulario">                    
                             <div class="mb-3">
-                            <label for="inputTitle" class="col-form-label">Tema de hoy:</label>
-                            <input type="text" class="form-control" id="inputTitle" required>
+                                <label for="inputTitle" class="col-form-label">Tema de hoy:</label>
+                                <input type="text" class="form-control" id="inputTitle" required>
                             </div>
                             <div class="mb-3">
-                            <label for="inputContent" class="col-form-label">Contenido:</label>
-                            <textarea class="form-control" id="inputContent" required></textarea>
+                                <label for="inputContent" class="col-form-label">Contenido:</label>
+                                <textarea class="form-control" id="inputContent" required></textarea>
                             </div>
                             <div class="mb-3">
-                            <label for="inputUrl_image" class="col-form-label">URL imagen:</label>
-                            <input type="url" class="form-control" id="inputUrl_image" required>
+                                <label for="inputUrl_image" class="col-form-label">URL imagen:</label>
+                                <input type="url" class="form-control" id="inputUrl_image" required>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                 <button type="submit" class="btn btn-primary" id="btn-save">¡Publicar!</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                         </form>
                     </div>

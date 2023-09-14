@@ -2,14 +2,6 @@
     margin: 0px;
 }
 
-.overflow {
-    margin: 0.5em;
-    padding: 0.5em;
-    border: 1px solid black;
-    overflow: scroll;
-    overflow-x: hidden;
-}
-
 .col-md-4 {
     padding-top: 1em;
     padding-bottom: 0.5em;
@@ -26,14 +18,23 @@
 .publicado {
     font-weight: bold;
 }
+
 .modificado {
     font-size: small;
 }
 
 .card-title{
-    margin:0px;
+    margin: 0.5em;
     padding: 0.5em;
     text-align: center;
+    background-color: var(--light-bg-color);
+}
+
+.p-contenido {
+    margin: 0.5em;
+    padding: 0.5em;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .botonera {

@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+}
+
+.main-sobremi {
+    background-color: var(--light-bg-color);
+}
+
+h1 {
+    padding-top: 0.5em;
+    text-align: center;
+    font-size: var(--xx-large);
+    color: var(--dark-bg-color);
+}
+
+.div-sobremi {
+    padding: 2em;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.img-sobremi {
+    margin: 0px;
+    align-content: center;
+    width: 50%;
+    height: 33%;
+}
+
+.p-sobremi {
+    margin: 0px;
+    padding:1em;
+    text-align:justify;
+    background-color: var(--dark-bg-color);
+    color: var(--light-tx-color);
+}

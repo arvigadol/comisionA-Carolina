@@ -1,15 +1,17 @@
-@import url(reset.css);
+@import url(secciones/reset.css);
 
-@import url(responsive.css);
+@import url(secciones/responsive.css);
 
-@import url(variables.css);
+@import url(secciones/variables.css);
 
-@import url(body.css);
+@import url(secciones/body.css);
 
-@import url(main.css);
+@import url(secciones/main.css);
 
-@import url(header.css);
+@import url(secciones/header.css);
 
-@import url(card.css);
+@import url(secciones/card.css);
 
-@import url(footer.css);
+@import url(secciones/footer.css);
+
+@import url(secciones/sobremi.css);
