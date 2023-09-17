@@ -47,7 +47,7 @@ export const ctrlUpdatePosteo = async (req,res) => {
         const posteoModificado = await PosteoModel.findByPk(id)
         if(!posteoModificado){
             return res.status(404).json({
-                message: 'Tarea no encontrada'
+                message: 'Publicación no encontrada'
             })
         }
         await posteoModificado.update(req.body)
@@ -73,11 +73,11 @@ export const ctrlDeletePosteo = async (req,res) => {
         })
         if(!posteoDeleted){
             return res.status(404).json({
-                message: 'Tarea no encontrada'
+                message: 'Publicación no encontrada'
             })
         }
         return res.status(200).json({
-            message: 'Tarea eliminada'
+            message: 'Publicación eliminada'
         })        
     } catch (error) {
         console.error(error)
