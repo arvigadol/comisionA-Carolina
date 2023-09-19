@@ -5,7 +5,7 @@ import { validator } from "../middlewares/validator.js"
 
 const posteoRouter = Router();
 
-//rutas para la vista
+//rutas para la vista principal
 posteoRouter.get('/posteos', ctrlViewPosteos)
 
 //endpoint para traer todas las posteos

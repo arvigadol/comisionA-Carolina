@@ -70,7 +70,8 @@ document.addEventListener('click', (event) => {
         idForm = idArticle;
         inputTitle.value = titleEdit;
         inputContent.value = contentEdit;
-        inputUrl_image.value = url_imageEdit;        
+        inputUrl_image.value = url_imageEdit; 
+               
         option = 'edit';
         btnSave.textContent = 'Editar';
         miModal.show();
