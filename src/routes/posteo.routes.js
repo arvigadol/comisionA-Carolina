@@ -1,15 +1,18 @@
 import {Router} from "express";
-import { ctrlGetPosteos,ctrlCreatePosteo,ctrlUpdatePosteo,ctrlDeletePosteo, ctrlViewPosteos, ctrlViewSobremi } from "../controllers/posteo.controllers.js";
+import { ctrlGetPosteos,ctrlCreatePosteo,ctrlUpdatePosteo,ctrlDeletePosteo, ctrlViewPosteos, ctrlViewSobremi, ctrlViewContacto } from "../controllers/posteo.controllers.js";
 import { createPosteoSchema, editPosteoSchema } from "../models/schemas/posteo.schema.js";
 import { validator } from "../middlewares/validator.js"
 
 const posteoRouter = Router();
 
-//rutas para la vista principal
+//ruta para la vista principal
 posteoRouter.get('/posteos', ctrlViewPosteos)
 
-//rutas para la vista Sobre Mí
+//ruta para la vista Sobre Mí
 posteoRouter.get('/sobremi', ctrlViewSobremi)
+
+//rutas para la vista Contacto
+posteoRouter.get('/contacto', ctrlViewContacto)
 
 //endpoint para traer todas las posteos
 posteoRouter.get('/api/posteos', ctrlGetPosteos)

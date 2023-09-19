@@ -1,7 +1,7 @@
 {
   "name": "proyecto-final",
   "version": "1.0.0",
-  "description": "",
+  "description": "<h1 align=\"center\"> EPICA - Argentina Programa 4.0 </h1>\r <h2 align=\"center\"> comision-A-Carolina-Ortega </h2>",
   "main": "app.js",
   "type": "module",
   "scripts": {
@@ -18,10 +18,18 @@
     "express-validator": "^7.0.1",
     "helmet": "^7.0.0",
     "morgan": "^1.10.0",
-    "mysql2": "^3.6.0",
+    "mysql2": "^3.6.1",
     "sequelize": "^6.33.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arvigadol/comisionA-Carolina.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arvigadol/comisionA-Carolina/issues"
+  },
+  "homepage": "https://github.com/arvigadol/comisionA-Carolina#readme"
 }

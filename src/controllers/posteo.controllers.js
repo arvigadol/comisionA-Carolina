@@ -25,6 +25,19 @@ export const ctrlViewSobremi = async (req, res) => {
      }
 }
 
+//controlador para mostrar la vista Contacto
+export const ctrlViewContacto = async (req, res) => {
+    try {
+        return res.render('contacto.ejs')
+     } catch (error) {
+         console.error(error)
+         return res.status(500).json() ({
+             message: 'Error del servidor'
+         })        
+     }
+}
+
+
 //controlador para traer todas las tareas
 export const ctrlGetPosteos = async (req,res) => {
     try {

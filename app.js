@@ -36,6 +36,6 @@ const port = process.env.PORT || 4000
 app.use('/', posteoRouter)
 
 app.listen(port, () => {
-    console.log(`server listening in http://localhost:${port}/posteos`)
+    console.log(`server listening in http://localhost:${port}/contacto`)
     startDB()
 })

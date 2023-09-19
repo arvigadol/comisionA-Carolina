@@ -27,11 +27,9 @@
 
 Expectativa y cómo seguir:
 
-En el futuro me gustaría que la card sólo muestre un poquito de texto y agregar automáticamente un "Leer más..." si el texto es muy largo, y que al clickear sobre la card me dirija a otra tarjeta que contega únicamente el título y el texto completo. Ya logré renderizar otras vistas desde el servidor (Sobre Mi), pero me falta poder navegar las vistas desde el navegador, no pude linkear las vistas en el header.
+En el futuro me gustaría que la card sólo muestre un poquito de texto y agregar automáticamente un "Leer más..." si el texto es muy largo, y que al clickear sobre la card me dirija a otra tarjeta que contega únicamente el título y el texto completo.
 
 Dudas y problemas encontrados:
-
--Estructura: no entiendo como renderizar otras secciones desde el servidor, por ejemplo, Sobre Mi. Pude agregarla con HTML en public, pero quería ponerla como una vista; intenté agregar una ruta y un controlador y hacerlo en ejs, pero no me salió.
 
 -HTML: 1- No sé cómo cambiar que la card pueda soportar más contenido. Me deja poner muy poquito texto. Agregué incluso un scroll con css, pero no se copia el texto en la card, en el text-area del modal no hay ningún problema, puedo poner un texto largo, pero se pegan sólo las primeras frases al article. --> Lo solucioné cambiando el tamaño de VARCHAR en Xampp, estaba fijado en 255, lo puse en 10000 para que entre más texto. Esto hizo que la foto se deformara, así que cambié las propiedades de una clase y lo solucioné, la foto queda en el tamaño correcto.
 
