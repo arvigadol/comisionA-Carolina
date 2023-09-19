@@ -13,6 +13,18 @@ export const ctrlViewPosteos = async (req, res) => {
      }
 }
 
+//controlador para mostrar la vista Sobre Mí
+export const ctrlViewSobremi = async (req, res) => {
+    try {
+        return res.render('sobremi.ejs')
+     } catch (error) {
+         console.error(error)
+         return res.status(500).json() ({
+             message: 'Error del servidor'
+         })        
+     }
+}
+
 //controlador para traer todas las tareas
 export const ctrlGetPosteos = async (req,res) => {
     try {
