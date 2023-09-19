@@ -27,7 +27,7 @@
 
 Expectativa y cómo seguir:
 
-En el futuro me gustaría que la card sólo muestre un poquito de texto y agregar automáticamente un "Leer más..." si el texto es muy largo, y que al clickear sobre la card me dirija a otra tarjeta que contega únicamente el título y el texto completo. También, poder hacer las otras vistas (Sobre mí y Contacto) con ejs, aún no pude hacerlo. También falta linkear HOME con la vista principal.
+En el futuro me gustaría que la card sólo muestre un poquito de texto y agregar automáticamente un "Leer más..." si el texto es muy largo, y que al clickear sobre la card me dirija a otra tarjeta que contega únicamente el título y el texto completo. Ya logré renderizar otras vistas desde el servidor (Sobre Mi), pero me falta poder navegar las vistas desde el navegador, no pude linkear las vistas en el header.
 
 Dudas y problemas encontrados:
 
