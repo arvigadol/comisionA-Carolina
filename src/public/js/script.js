@@ -1,4 +1,3 @@
-const contenedor = document.getElementById('container-row')
 const btnNuevaPublicacion = document.getElementById('btn-new')
 const miModal = new bootstrap.Modal(document.getElementById('miModal'))
 const btnSave = document.getElementById('btn-save');
