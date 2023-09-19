@@ -1,10 +1,9 @@
 const contenedor = document.getElementById('container-row')
-const btnCrear = document.getElementById('btn-new')
+const btnNuevaPublicacion = document.getElementById('btn-new')
 const miModal = new bootstrap.Modal(document.getElementById('miModal'))
 const btnSave = document.getElementById('btn-save');
 const form = document.getElementById('formulario');
 
-let html = ''
 let option = ''
 let idForm = ''
 
@@ -12,11 +11,13 @@ const inputTitle = document.getElementById('inputTitle')
 const inputContent = document.getElementById('inputContent')
 const inputUrl_image = document.getElementById('inputUrl_image')
 
-btnCrear.addEventListener('click', () => {
+//Este es el botón Nueva Publicación. Utiliza el mismo modal que el Editar del article, por eso le pedimos al btnSave que le ponga el textcontent Publicar. Aún no se conecta con la base de datos, esto es sólo para mostrar el formulario y que aparezca vacío cada vez que se abre
+btnNuevaPublicacion.addEventListener('click', () => {
     option = "new"
     inputTitle.value = ""
     inputContent.value = ""
     inputUrl_image.value = ""
+    btnSave.textContent = '¡Publicar!';
     miModal.show()
 })
 
@@ -46,7 +47,7 @@ document.addEventListener('click', (event) => {
             'Tu publicación fue eliminada',
             'success'
             )
-                    article.remove()
+                article.remove()
                     
                 }
             }).catch (error => {
@@ -57,6 +58,7 @@ document.addEventListener('click', (event) => {
     }
 })
 
+//Este es el botón Editar del article. Utiliza el mismo modal que el Nueva Publicación, por eso le pedimos al btnSave que le ponga el textcontent Editar. Esto muestra lo que se ingresó en la publicación anterior y permite editar el contenido de cada input
 document.addEventListener('click', (event) => {
     if (event.target.matches('#btn-edit')) {
         const article = event.target.closest('.mb-3')
@@ -77,10 +79,10 @@ document.addEventListener('click', (event) => {
         miModal.show();
     }
 });
-
+//El formulario escucha el evento submit. Dado que se usa el mismo modal (formulario) tanto para la publicación nueva como para editar una publicación anterior, entonces se llama a este modal desde dos botones distintos, es por ello que utilizamos las opciones new y edit, dependiendo de qué estemos haciendo va a pasar una cosa o la otra. Acá se conecta con la base de datos mediante fetch
 form.addEventListener('submit',(event) => {
     event.preventDefault();
-
+//Acá se realiza una nueva publicación, al apretar el botón Publicar, la option=new la seteamos en el botón btnNuevaPublicacion cuando escucha el click. Acá se conecta con la base de datos. Luego, muestra la alerta correspondiente.
     if (option === "new") {
         const newPosteo = {
             title: inputTitle.value,
@@ -110,7 +112,7 @@ form.addEventListener('submit',(event) => {
             console.error(error);
         })
     }
-
+//Acá se edita una publicación anterior, en el article, apretando el botón Editar y se conecta con la base de datos. La option=edit la seteamos cuando pusimos al documento a escuchar el evento click, en caso de que el mismo coincida con el id='#btn-edit'. Luego, muestra la alerta correspondiente.
     if (option === "edit") {
         const newPosteo = {
             title: inputTitle.value,
