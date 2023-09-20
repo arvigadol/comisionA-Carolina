@@ -5,7 +5,7 @@
 
 header {
     margin: 0px;
-    padding: 0px;
+    padding: 1em;
     padding-left: 0.5em;
     position: sticky;
     top: 0;
@@ -24,7 +24,7 @@ ul {
 li > a {
     text-decoration: none;
     display: block;
-    padding: 1em;
+    padding: 0.2em;
     color: var(--light-tx-color);
     font-weight: bold;
 }
@@ -49,6 +49,7 @@ a:hover {
     color: var(--light-tx-color);
 }
 
+
 .mariposa {
     position: relative;
     animation: mariposa 5s alternate infinite;
@@ -65,4 +66,42 @@ a:hover {
     to {
         opacity: 0.5;
     }
+}
+
+.navbar ul li a{
+    position: relative;
+}
+
+.navbar ul li a::before,
+.navbar ul li a::after
+{
+    content: '';
+    border-bottom: 2px solid black;
+    position: absolute;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.navbar ul li a::before{
+    bottom: -5px;
+    width: 90%;
+    right: 0;
+}
+
+.navbar ul li a::after{
+    bottom: -10px;
+    width: 60%;
+    left: 0;
+}
+
+.navbar ul li a.activo::before,
+.navbar ul li a:hover::before{
+    opacity: 1;
+    width: 70%;
+}
+
+.navbar ul li a.activo::after,
+.navbar ul li a:hover::after{
+    opacity: 1;
+    width: 40%;
 }
